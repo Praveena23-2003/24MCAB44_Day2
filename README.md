@@ -1,66 +1,80 @@
-**Day2 <24MCAB44> Maven Project**
+# 📘 Day2 Task – Java Maven Project (24MCAB44)
 
-Overview:
+This project demonstrates core Java concepts, real-world system simulation, and Maven integration through two major modules: **Library Management System** and **Banking System Simulation**.
 
-This project covers multiple Java programming tasks as part of Day 2 assignment:
+---
 
-Maven Setup:
+## 🛠️ Project Setup
 
-Created a Maven project named Day2<regno>.
+- **Project Name:** `Day2_24MCAB44`
+- **Type:** Maven-based Java project
+- **Dependencies Added:**
+  - ✅ Apache Log4j SLF4J Binding – For logging support
+  - ✅ Apache Commons CLI – For parsing command-line arguments
 
-Added dependencies for Apache Log4j SLF4J Binding and Apache Commons CLI to enable logging and command-line parsing capabilities.
+---
 
+## 📚 Task 1: Library Management System
 
-Library Management System:
+### Description:
+- Models a basic library using object-oriented principles.
+- Consists of:
+  - `Book` (Base class)
+  - `FictionBook` and `NonFictionBook` (Derived classes)
 
-Designed using inheritance with a base class Book and subclasses FictionBook and NonFictionBook.
+### Concepts Demonstrated:
+- ✅ Inheritance
+- ✅ Polymorphism
+- ✅ Encapsulation
 
-Demonstrates object-oriented concepts like inheritance and polymorphism.
+---
 
+## 💰 Task 2: Banking System Simulation
 
-Banking System Simulation:
+### Features:
+- Create and manage user bank accounts
+- Deposit and withdraw money
+- Check account balances
 
-Allows users to create accounts, deposit, withdraw, and check balances.
+### Exception Handling:
+Robust error management for:
+- ❌ Overdrafts (insufficient funds)
+- ❌ Negative/zero transaction amounts
+- ❌ Invalid input types
+- ❌ Access to non-existent accounts
 
-Integrates with MongoDB to persist account data.
+### MongoDB Integration:
+- Persists account data using **MongoDB**
+- Ensures data remains available between sessions
 
-Implements exception handling to gracefully manage invalid operations such as:
+---
 
-Overdrafts (withdrawals exceeding balance)
+## 🚀 Technologies Used
 
-Negative or zero transaction amounts
+| Technology       | Purpose                             |
+|------------------|-------------------------------------|
+| Java (JDK 11+)   | Core language                       |
+| Maven            | Build and dependency management     |
+| MongoDB          | NoSQL database for banking system   |
+| Log4j (SLF4J)    | Logging support                     |
+| Commons CLI      | Command-line argument parsing       |
 
-Non-existent accounts
+---
 
-Invalid input types (e.g., entering text when number expected)
+## 🔑 Key Highlights
 
+- 🧩 **Modular Design** – Follows clean separation of concerns
+- 🔄 **Object-Oriented Approach** – Inheritance & Polymorphism in practice
+- 📦 **Maven Integration** – For building and managing dependencies
+- 🔐 **Exception Handling** – Real-world error scenarios handled cleanly
+- 🗃️ **Database Usage** – MongoDB for persistent storage
 
-Technologies Used:-
+---
 
-Java (JDK 11+)
+## ▶️ How to Run
 
-Maven (dependency and build management)
-
-MongoDB (for data persistence)
-
-Apache Log4j (logging framework)
-
-Apache Commons CLI (command-line interface parsing)
-
-
-Key Highlights:-
-
-Robust error handling ensures program stability and user-friendly feedback.
-
-Object-oriented design for easy extension and maintenance.
-
-MongoDB usage demonstrates real-world database integration in Java projects.
-
-
-How to Run:-
-
-Ensure MongoDB is running locally.
-
-Build and run using Maven commands, selecting between library or banking system as main class.
-
-This project demonstrates foundational skills in Java development, project management with Maven, use of external libraries, database interaction, and error management.
+1. **Start MongoDB** on your local machine.
+2. **Build and Run with Maven**:
+   ```bash
+   mvn clean install
+   mvn exec:java -Dexec.mainClass="your.main.ClassName"
